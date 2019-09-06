@@ -92,3 +92,56 @@ function createCarousel(/*next level: img array*/) {
 }
 
 createCarousel();
+
+function createBetterCarousel(/*next level: img array*/) {
+  // define new elements
+  const carousel = document.createElement('div');
+  const leftButton = document.createElement('div');
+  // const img2 = document.createElement('img');
+  // const img3 = document.createElement('img');
+  const rightButton = document.createElement('div');
+
+  // setup structure of elements
+  carouselContainer.appendChild(carousel);
+  carousel.appendChild(leftButton);
+  // next level: loop over image array
+  // carousel.appendChild(displayImg);
+
+  let imgTagArray = [];
+  for (let i = 0; i < imagesArray.length; i++){
+    imgTagArray[i] = document.createElement('img');
+    carousel.appendChild(imgTagArray[i]);
+    imgTagArray[i].classList.add('better-carousel-img');
+    imgTagArray[i].src = imagesArray[i];
+  };
+
+  // carousel.appendChild(img1);
+  // carousel.appendChild(img2);
+  // carousel.appendChild(img3);
+  carousel.appendChild(rightButton);
+
+  // set class names
+  carousel.classList.add('carousel');
+  leftButton.classList.add('left-button');
+  rightButton.classList.add('right-button');
+
+  // set attributes
+  //displayImg.src = imagesArray[0];
+
+  // set text content
+  leftButton.textContent = "<";
+  rightButton.textContent = ">";
+
+  // set event listeners for image carousel
+  rightButton.addEventListener('click', event => {
+    
+  });
+
+  leftButton.addEventListener('click', event => {
+
+  });
+
+  return carousel;
+}
+
+//createBetterCarousel();

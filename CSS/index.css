@@ -279,3 +279,6 @@ body {
 .carousel img {
   width: 100%;
 }
+.carousel .better-carousel-img {
+  position: absolute;
+}
